@@ -10,6 +10,14 @@
   <!-- 音乐和 JS 用相对路径 -->
   <audio id="bgMusic" src="./assets/music.mp3" loop></audio>
 
-  <script type="module" src="./main.js"></script>
+  <script type="module">
+  import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.js";
+  import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/loaders/GLTFLoader.js";
+  import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/controls/OrbitControls.js";
+  import { initScene } from "./main.js";
+
+  initScene(THREE, GLTFLoader, OrbitControls);
+</script>
+
 </body>
 </html>
