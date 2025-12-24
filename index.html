@@ -3,21 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>🎄 3D Christmas Tree</title>
-  <!-- 引用 CSS 用相对路径 -->
   <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <!-- 音乐和 JS 用相对路径 -->
+  <!-- 背景音乐 -->
   <audio id="bgMusic" src="./assets/music.mp3" loop></audio>
 
-  <script type="module">
-  import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.js";
-  import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/loaders/GLTFLoader.js";
-  import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/controls/OrbitControls.js";
-  import { initScene } from "./main.js";
-
-  initScene(THREE, GLTFLoader, OrbitControls);
-</script>
-
+  <!-- Three.js 应用区 -->
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
+
