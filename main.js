@@ -22,6 +22,13 @@ scene.add(pointLight);
 
 // 加载 GLB 模型（相对路径）
 const loader = new GLTFLoader();
+loader.load(
+  "./assets/tree.glb",
+  (gltf) => { scene.add(gltf.scene); },
+  undefined,
+  (err) => console.error("GLTF load failed:", err)
+);
+
 loader.load("./assets/tree.glb", (gltf) => {
   const tree = gltf.scene;
   tree.scale.set(1.3, 1.3, 1.3);
